@@ -14,52 +14,84 @@ import LightDarkMode from "./icons/Light-dark-mode.astro"
     <li><a href="#">Skills</a></li>
 </ul>
 
-    <button>CV</button>
+    <div class="cv-btn">
+        <a href="../../public/CV_Dev_2024.pdf" target="_blank" >CV</a>
+    </div>
 </nav>
 
 
 <style>
     nav {
-        height: 50px;
+        height: 4rem;
         width: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 10px 0 10px;
+        padding: 0 20px;
+        gap: 20px;
     
         color: white;
-        background: #212121;
+        background: #1C191D;
     }
 
     ul {
         display: flex;
         padding: 0;
+        margin: 0;
+        gap: 20px;
+    }
+
+    .lightmode {
+        margin-right: auto;
+        width: 100px;
+        height: 30px;
     }
 
     ul > li {
-        border: 1px solid ;
+        
         display: flex;
+        width: 120px;
+        height: 40px;
         border-radius: 10px;
-        width: 150px;
-        height: 50px;
         text-align: center;
         justify-content: center;
         align-items: center;
-        margin: 10px;
+
+        background-color: #1E1B1F;
+
+        box-shadow: 0px 4px 2px -2px #181519;
+
     }
 
     li > a {
         width: 100%;
         color: white;
-        font-size: 2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
         text-decoration: none;
     }
 
-    button {
-        width: 150px;
-        height: 50px;
-        text-align: center;
+    .cv-btn {
+
+        width: 100px;
+        height: 30px;
+
+        border: 3px solid #B44CE4;
         border-radius: 10px;
+        
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .cv-btn > a {
+        width: 100%;
+        color: #B44CE4;
+        text-decoration: none;
     }
 
 </style>

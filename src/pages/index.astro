@@ -1,7 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Presentation from '../components/Presentation.astro';
+import PresentationSection from '../components/presentation/presentationSection.astro';
+import AboutMeSection from '../components/about-me/AboutMeSection.astro';
+import ProjectSection from '../components/projects/ProjectSection.astro';
+import SkillSection from '../components/Skills/SkillSection.astro';
+import ContactSection from '../components/Contact-me/contactSection.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -13,35 +17,38 @@ import Footer from '../components/Footer.astro';
 	<div class="container">
 		<!-- main Content -->
 		<main>
-			<Presentation  
+			<PresentationSection 
 				title='Pablo Espinosa (@pabrax)' 
 				cargo='Full stack developer' 
-				description='descripcion mamalona'
+				description='+2 Años Programando Aplicaciones, Me especializo en El desarrollo de API REST y SPA.'
 			/>
 
-			<section>
-				seccion 1
-			</section>
+			<AboutMeSection/>
 
-			<section>
-				seccion 1
-			</section>	
+			<ProjectSection/>
+
+			<SkillSection/>
+
+			<ContactSection/>
+			
+			<!-- footer -->
+			<Footer/>
 		</main>
 
 	</div>
 
-
-	<!-- footer -->
-	<Footer/>
 
 </Layout>
 
 <style>
 	.container {
 		display: flex;
+		flex-direction: column;
 		width: auto;
 		height: auto;
 		justify-content: center;
+		align-items: center;
+		margin-top: 5rem;
 	}
 	
 	main {
@@ -50,6 +57,7 @@ import Footer from '../components/Footer.astro';
 		max-width: 1400px;
 		align-items: center;
 		flex-direction: column;
+		gap: 7rem;
 	}
 
 </style>

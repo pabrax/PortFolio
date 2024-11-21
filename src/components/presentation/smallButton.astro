@@ -1,0 +1,35 @@
+---
+interface Props {
+    title: string
+    href: string
+}
+
+const {title, href} = Astro.props;
+
+---
+
+<a href={href} class="title-box" target="_blank">
+    <slot/>
+    {title}
+</a>
+
+
+<style>
+    .title-box {
+        width: 120px;
+        height: 30px;
+        display: flex;
+        border-radius: 10px;
+        background-color: #B44CE4;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        padding: 3px 10px;
+
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+</style>

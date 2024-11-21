@@ -1,0 +1,136 @@
+---
+import SkillsCard from "./SkillsCard.astro";
+import TitleSection from "../TitleSection.astro";
+
+// icons
+
+// frontend
+import AngularIcon from "../icons/tech//angular-icon.astro";
+import HtmlIcon from "../icons/tech//html-icon.astro";
+import CssIcon from "../icons/tech//css-icon.astro";
+import JsIcon from "../icons/tech//javascript-icon.astro";
+import AstroIcon from "../icons/tech//astro-icon.astro";
+
+
+// backend
+import DotNetIcon from "../icons/tech/dotnet-icon.astro";
+import JavaIcon from "../icons/tech/java-icon.astro";
+import NodeIcon from "../icons/tech/nodejs-icon.astro";
+import PythonIcon from "../icons/tech/python-icon.astro";
+import PhpIcon from "../icons/tech/php-icon.astro";
+import LaravelIcon from "../icons/tech/laravel-icon.astro";
+
+
+// tools
+import BashIcon from "../icons/tech/bash-icon.astro";
+import GitIcon from "../icons/tech/git-icon.astro";
+import LinuxIcon from "../icons/tech/linux-icon.astro";
+import DockerIcon from "../icons/tech/docker-icon.astro";
+import MySqlIcon from "../icons/tech/mysql-icon.astro";
+import VsCodeIcon from "../icons/tech/vscode-icon.astro";
+
+
+
+---
+
+<section>
+
+    <TitleSection title="Skills"/>
+
+    <div class="skills">
+        <SkillsCard title="Frontend">
+            <a href="">
+                <HtmlIcon/>
+            </a>
+            <a href="">
+                <CssIcon/>
+            </a>
+
+            <a href="">
+                <JsIcon/>
+            </a>
+
+            <a href="">
+                <AngularIcon/>
+            </a>
+
+            <a href="">
+                <AstroIcon/>
+            </a>
+
+        </SkillsCard>
+        
+        <SkillsCard title="Backend">
+
+            <a href="">
+                <DotNetIcon/>
+            </a>
+
+            <a href="">
+                <JavaIcon/>
+            </a>
+
+            <a href="">
+                <NodeIcon/>
+            </a>
+
+            <a href="">
+                <PythonIcon/>
+            </a>
+
+            <a href="">
+                <PhpIcon/>
+            </a>
+
+            <a href="">
+                <LaravelIcon/>
+            </a>
+
+        </SkillsCard>
+        
+        
+        <SkillsCard title="Tools">
+            <a href="">
+                <BashIcon/>
+            </a>
+            <a href="">
+                <LinuxIcon/>
+            </a>
+            <a href="">
+                <DockerIcon/>
+            </a>
+            <a href="">
+                <MySqlIcon/>
+            </a>
+            <a href="">
+                <GitIcon/>
+            </a>
+            <a href="">
+                <VsCodeIcon/>
+            </a>
+        </SkillsCard>
+    </div>
+
+</section>
+
+
+<style>
+
+    section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        flex-wrap: wrap;
+    }
+</style>

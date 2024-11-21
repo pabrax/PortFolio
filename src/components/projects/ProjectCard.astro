@@ -1,0 +1,92 @@
+---
+
+import ArrowTopRight from '../icons/arrow-top-right-icon.astro'
+
+interface Props {
+    title: string
+    description: string
+    image: string
+    href: string
+}
+
+const { title, description, image, href } = Astro.props;
+---
+
+<div class="project-card" >
+    <div class="image-container">
+        <img src={image} alt="Project Image" width="200" height="200">
+    </div>
+    <div class="information-container">
+        <a href={href} class="title-zone" target="_blank">
+            <h2>{title}</h2>
+            <ArrowTopRight/>
+        </a>
+        <p>{description}</p>
+
+        <div class="tech-list">
+            <slot/>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .project-card {
+        width: 100%;
+        height: auto;
+        display: flex;
+        max-height: 220px;
+
+        gap: 1rem;
+        background: #1C191D;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .image-container {
+        width: 30%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .image-container > img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .information-container {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .information-container > p {
+        font-size: 1.2rem;
+    }
+
+    .tech-list {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .title-zone {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+    }
+    .title-zone > h2 {
+        font-size: 2rem;
+        color: #B44CE4;
+    }
+
+
+
+</style>

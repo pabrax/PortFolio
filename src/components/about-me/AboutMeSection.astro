@@ -1,0 +1,122 @@
+---
+import TitleSection from "../TitleSection.astro";
+import CollegeSection from "./collegeSection.astro";
+---
+
+<section>
+  <TitleSection title="Sobre Mi" />
+
+  <!-- section Container -->
+  <div class="content-box">
+    <div class="information-container">
+      <p>
+        Me llamo <span>Pablo</span>, soy un desarrollador con más de <span>2 años de experiencia</span> en
+        el campo de la programacion. Me dedico al desarrollo Full stack pero Me
+        especializo sobre todo en el Backend creando <span>APIs REST</span> y <span>SPA</span>.
+        <br />
+
+        Cuento Con Habilidades En lenguajes de programacion como <span>Java</span>, <span>Python</span>,
+        <span>JavaScript</span>, <span>C#</span>, <span>PHP</span>, entre otros. Tambien tengo experiencia en el uso de
+        frameworks y librerias como <span>Node.js</span>, <span>Express</span>, <span>FastAPI</span>, <span>Laravel</span>, <span>Angular</span> y <span>React</span>,
+        entre otros.
+        <br />
+
+        Me destaco en la colaboración con otros desarrolladores y en la
+        adaptación a nuevas tecnologías y metodologías. Siempre estoy buscando
+        oportunidades para aprender y mejorar, y me entusiasma contribuir a
+        proyectos innovadores que impulsen el éxito del equipo.
+      </p>
+
+      <div class="college-section">
+        <h1>Estudios</h1>
+
+        <CollegeSection
+          titulo="Desarrollo de Software"
+          fecha="2021 - Actualidad"
+          lugar="Instituto Tecnologico Metropolitano"
+        />
+
+        <CollegeSection
+          titulo="Media Tecnica de Marketing"
+          fecha="2019 - 2021"
+          lugar="INDECAP"
+        />
+
+        <CollegeSection
+          titulo="Bachiller"
+          fecha="2020"
+          lugar="I. E. Cincuentenario de Fabricato"
+        />
+      </div>
+    </div>
+
+    <img
+      src="../../../public/about.jpeg"
+      alt="Pablo Espinosa"
+      width="200"
+      height="200"
+    />
+  </div>
+</section>
+
+<style>
+  section {
+    width: 100%;
+    height: auto;
+    max-width: 1300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .content-box {
+    width: 100%;
+    max-height: 900px;
+    display: flex;
+    gap: 2rem;
+    background: #1c191d;
+    padding: 2rem;
+  }
+
+  .information-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+    height: 100%;
+
+    gap: 2rem;
+  }
+
+  .information-container p {
+    font-size: 1.3rem;
+    color: white;
+  }
+
+  .information-container p > span {
+    color: #b44ce4;
+    font-weight: bold;
+  }
+  
+  .college-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .college-section h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    text-decoration: underline;
+    color: #b44ce4;
+  }
+
+  img {
+    width: 40%;
+    height: auto;
+    max-height: 900px;
+  }
+</style>

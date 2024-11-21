@@ -1,24 +1,85 @@
+---
+import LinkedinFooterIcon from "./icons/linkedin-footer-icon.astro"
+import GithubFooterIcon from "./icons/github-footer-icon.astro"
+---
+
+
 <footer>
-    <div class="logo-container">
-        <img src="" alt="github">
-    </div>
 
-    <button>Regresar</button>
+    <hr>
 
-    <div class="logo-container">
-        <img src="" alt="linkedin">
+    <div class="content">
+        <a href="https://github.com/pabrax" target="_blank" class="logo-container">
+            <GithubFooterIcon/>
+        </a>
+        
+        <a class="go-back" href="#">
+            <h1>
+                regresar
+            </h1>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/pabrax/" target="_blank" class="logo-container">
+            <LinkedinFooterIcon/>
+        </a>
     </div>
 </footer>
 
 <style>
+
     footer {
         width: 100%;
-        height: 50px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+    .content {
+        width: 100%;
+        height: 100px;
+        margin: 0;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
+    .logo-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    hr {
+        width: 100%;
+        border: 1px solid #7E808C;
+    }
+
+
+    .go-back {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 3px solid #B44CE4;
+        border-radius: 10px;
+
+        text-decoration: none;
+    }
+
+    h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 1.8rem;
+        color: #B44CE4;
+        margin: 0;
+    }
+
+</style>
     
 </style>

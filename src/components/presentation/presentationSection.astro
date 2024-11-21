@@ -1,0 +1,127 @@
+---
+
+import SmallButton from './smallButton.astro'
+
+// icons
+import GithubIcon from './icons/github-icon.astro'
+import LinkedinIcon from './icons/linkedin-icon.astro'
+import EmailIcon from './icons/email-icon.astro'
+import CVIcon from './icons/id-card-icon.astro'
+
+interface Props {
+    title: string
+    cargo: string
+    description: string
+}
+
+const {title, cargo, description} = Astro.props
+---
+
+<section>
+    <div class="container">
+        <div class="my-image">
+            <img src="../../../public/cv_pic.jpeg" alt="imagen de presentacion">
+        </div>
+    
+    
+        <div class="desc-n-buttons">
+    
+            <div class="title-n-desc">
+                <h1>{title}</h1>
+                <h3>{cargo}</h3>
+                <p>{description}</p>
+            </div>
+    
+            <div class="buttons-container">
+                <SmallButton title='GitHub' href='https://github.com/pabrax'>
+                    <GithubIcon/>
+                </SmallButton>
+                
+                <SmallButton title='Linkedin' href='https://www.linkedin.com/in/pabrax/'>
+                    <LinkedinIcon/>
+                </SmallButton>
+                
+                <SmallButton title='Email' href='mailto:soypablo0420@gmail.com'>
+                    <EmailIcon/>
+                </SmallButton>
+    
+                <SmallButton title='CV' href='../../public/CV_Dev_2024.pdf'>
+                    <CVIcon/>
+                </SmallButton>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+</section>
+
+
+<style>
+    section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    .container {
+        display: flex;
+        width: 80%;
+        gap: 5rem;
+    }
+
+    .my-image {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .my-image > img {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .desc-n-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+
+    .title-n-desc {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: 1rem;
+    }
+
+    .title-n-desc > h1 {
+        font-size: 3rem;
+        color: #B44CE4;
+    }
+    
+    .title-n-desc > h3 {
+        font-size: 2rem;
+    }
+    .title-n-desc > p {
+        font-size: 1.2rem;
+    }
+
+    .buttons-container {
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+
+    }
+
+    hr {
+        width: 100%;
+        border: 1px solid #7E808C;
+    }
+
+
+</style>

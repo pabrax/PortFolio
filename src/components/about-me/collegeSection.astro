@@ -1,0 +1,39 @@
+---
+interface Props {
+    titulo: string
+    fecha: string
+    lugar: string
+}
+
+const {titulo, fecha, lugar} = Astro.props;
+---
+
+<div class="estudio-box">
+    <div class="content">
+        <h3>{titulo}</h3>
+        <h4>{lugar}</h4>
+        <p>{fecha}</p>
+    </div>
+</div>
+
+<style>
+    .estudio-box {
+        display: flex;
+        gap: 10px;
+
+        background: #252326;
+        border-left: 5px solid #B44CE4;
+    }
+
+    .content {
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    h3 {
+        color: #B44CE4;
+    }
+
+
+
+</style>
