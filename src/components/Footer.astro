@@ -37,12 +37,10 @@ import GithubFooterIcon from "./icons/github-footer-icon.astro"
         gap: 20px;
     }
 
-
     .content {
         width: 100%;
         height: 100px;
         margin: 0;
-
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -52,12 +50,15 @@ import GithubFooterIcon from "./icons/github-footer-icon.astro"
         width: 50px;
         height: 50px;
     }
+    .logo-container:hover {
+        transform: scale(1.05) translateY(-2px);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
 
     hr {
         width: 100%;
         border: 1px solid #7E808C;
     }
-
 
     .go-back {
         width: 200px;
@@ -65,11 +66,13 @@ import GithubFooterIcon from "./icons/github-footer-icon.astro"
         display: flex;
         justify-content: center;
         align-items: center;
-
         border: 3px solid #B44CE4;
         border-radius: 10px;
-
         text-decoration: none;
+    }
+    .go-back:hover {
+        transform: scale(1.05) translateY(-5px);
+        transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
     h1 {
@@ -79,6 +82,60 @@ import GithubFooterIcon from "./icons/github-footer-icon.astro"
         color: #B44CE4;
         margin: 0;
     }
+
+    @media (max-width: 1366px) {
+        .logo-container {
+            width: 40px;
+            height: 40px;
+        }
+        .go-back {
+            width: 180px;
+            height: 45px;
+        }
+        h1 {
+            font-size: 1.6rem;
+        }
+        hr {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 720px) {
+        
+        .logo-container {
+            width: 30px;
+            height: 30px;
+        }
+        .go-back {
+            width: 160px;
+            height: 40px;
+        }
+        h1 {
+            font-size: 1.4rem;
+        }
+        hr {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo-container {
+            width: 25px;
+            height: 25px;
+        }
+        .go-back {
+            width: 140px;
+            height: 35px;
+        }
+        h1 {
+            font-size: 1.2rem;
+        }
+        hr {
+            width: 70%;
+        }
+    }
+
+
 
 </style>
     

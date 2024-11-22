@@ -16,7 +16,8 @@ const {title, href} = Astro.props;
 
 <style>
     .title-box {
-        width: 120px;
+        width: 100%;
+        max-width: 120px;
         height: 30px;
         display: flex;
         border-radius: 10px;
@@ -24,12 +25,21 @@ const {title, href} = Astro.props;
         align-items: center;
         justify-content: center;
         gap: 5px;
-
         padding: 3px 10px;
-
         text-decoration: none;
         font-size: 1.2rem;
         font-weight: bold;
+    }
+    .title-box:hover {
+        background-color: #A13DD6;
+        transition: background-color 0.3s ease;
+    }
+
+    @media (max-width: 600px) {
+        .title-box {
+            font-size: 1rem;
+            padding: 2px 8px;
+        }
     }
 
 </style>

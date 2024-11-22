@@ -19,10 +19,16 @@ const {titulo, fecha, lugar} = Astro.props;
 <style>
     .estudio-box {
         display: flex;
+        flex-direction: column;
         gap: 10px;
-
         background: #252326;
         border-left: 5px solid #B44CE4;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .estudio-box:hover {
+        background: #1e1b1f;
+        transform: scale(1.01);
     }
 
     .content {
@@ -32,6 +38,18 @@ const {titulo, fecha, lugar} = Astro.props;
 
     h3 {
         color: #B44CE4;
+    }
+
+    @media (min-width: 768px) {
+        .estudio-box {
+            flex-direction: row;
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 530px) {
+        .estudio-box {
+            padding: 10px;
+        }
     }
 
 

@@ -17,7 +17,7 @@ interface Props {
 const {title, cargo, description} = Astro.props
 ---
 
-<section>
+<section id="presentacion">
     <div class="container">
         <div class="my-image">
             <img src="../../../public/cv_pic.jpeg" alt="imagen de presentacion">
@@ -121,6 +121,111 @@ const {title, cargo, description} = Astro.props
     hr {
         width: 100%;
         border: 1px solid #7E808C;
+    }
+
+
+    @media (max-width: 1366px) {
+        .container {
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .my-image {
+            width: 60%;
+        }
+
+        .my-image > img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .title-n-desc > h1 {
+            font-size: 2.5rem;
+        }
+
+        .title-n-desc > h3 {
+            font-size: 1.5rem;
+        }
+
+        .title-n-desc > p {
+            font-size: 1rem;
+        }
+
+        .buttons-container {
+            gap: 1rem;
+        }
+        hr {
+            width: 90%;
+        }	
+    }
+
+    @media (max-width: 1000px) {
+        .container {
+            flex-direction: column;
+
+            width: 90%;
+        }
+
+        .my-image {
+            width: 80%;
+        }
+
+        .my-image > img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .title-n-desc {
+        }
+        text-align: center;
+        .title-n-desc > h1 {
+            font-size: 2rem;
+        }
+
+        .title-n-desc > h3 {
+            font-size: 1.2rem;
+        }
+
+        .title-n-desc > p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            width: 100%;
+        }
+
+        .my-image {
+            width: 100%;
+        }
+
+        .my-image > img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .title-n-desc {
+            text-align: center;
+        }
+
+        .title-n-desc > h1 {
+            font-size: 1.5rem;
+        }
+
+        .title-n-desc > h3 {
+            font-size: 1rem;
+        }
+
+        .title-n-desc > p {
+            font-size: 0.8rem;
+        }
+
+        .buttons-container {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
     }
 
 

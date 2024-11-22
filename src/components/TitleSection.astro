@@ -33,4 +33,36 @@ const { title } = Astro.props;
         color: #B44CE4;
         margin: 0;
     }
+@media (max-width: 1366px) {
+    .title-container {
+        width: 350px;
+        height: 45px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .title-container {
+        width: 300px;
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-container {
+        width: 250px;
+        height: 35px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+}
 </style>

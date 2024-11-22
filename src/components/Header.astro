@@ -1,6 +1,5 @@
 ---
 import LightDarkMode from "./icons/Light-dark-mode.astro"
-
 ---
 
 <nav>
@@ -8,19 +7,29 @@ import LightDarkMode from "./icons/Light-dark-mode.astro"
         <LightDarkMode/>
     </div>
 
-<ul>
-    <li><a href="#">Sobre Mi</a></li>
-    <li><a href="#">Proyectos</a></li>
-    <li><a href="#">Skills</a></li>
-</ul>
+    <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre Mi</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#skills">Skills</a></li>
+    </ul>
 
     <div class="cv-btn">
         <a href="../../public/CV_Dev_2024.pdf" target="_blank" >CV</a>
     </div>
+
+    <select class="nav-select" onchange="location = this.value;">
+        <option value="#">Menu</option>
+        <option value="#sobre-mi">Sobre Mi</option>
+        <option value="#proyectos">Proyectos</option>
+        <option value="#skills">Skills</option>
+        <option value="../../public/CV_Dev_2024.pdf">CV</option>
+    </select>
 </nav>
 
-
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
     nav {
         height: 4rem;
         width: auto;
@@ -32,9 +41,15 @@ import LightDarkMode from "./icons/Light-dark-mode.astro"
     
         color: white;
         background: #1C191D;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
     }
 
-    ul {
+    .nav-links {
         display: flex;
         padding: 0;
         margin: 0;
@@ -47,8 +62,7 @@ import LightDarkMode from "./icons/Light-dark-mode.astro"
         height: 30px;
     }
 
-    ul > li {
-        
+    .nav-links > li {
         display: flex;
         width: 120px;
         height: 40px;
@@ -60,7 +74,6 @@ import LightDarkMode from "./icons/Light-dark-mode.astro"
         background-color: #1E1B1F;
 
         box-shadow: 0px 4px 2px -2px #181519;
-
     }
 
     li > a {
@@ -72,7 +85,6 @@ import LightDarkMode from "./icons/Light-dark-mode.astro"
     }
 
     .cv-btn {
-
         width: 100px;
         height: 30px;
 
@@ -94,4 +106,30 @@ import LightDarkMode from "./icons/Light-dark-mode.astro"
         text-decoration: none;
     }
 
+    .nav-select {
+        display: none;
+        background-color: #1E1B1F;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+        .nav-links {
+            display: none;
+        }
+
+        .menu-button {
+            display: block;
+        }
+
+        .cv-btn {
+            display: none;
+        }
+        .nav-select {
+            display: block;
+        }
+    }
 </style>

@@ -7,7 +7,7 @@ import TitleSection from "../TitleSection.astro";
     
     <div class="contact-container">
         <div class="contact-info">
-            <h2>Si has llegado hasta este punto y Te sientes Interesado No dudes en contactarme por medio de mis Redes sociales o Enviandome un Email. </h2>
+            <h2>Si has llegado hasta este punto y Te sientes Interesado No dudes en contactarme por medio de mis Redes sociales o Enviandome un Email. </h2><br>
             <h2>Estoy Disponible para colaboraciones y Oportunidades Laborales.</h2>
             <h3>Gracias por Visitar!</h3>
         </div>
@@ -22,15 +22,14 @@ import TitleSection from "../TitleSection.astro";
         align-items: center;
         justify-content: center;
         gap: 5rem;
-    }
     .contact-container {
         width: 100%;
+        max-width: 800px;
         display: flex;
         flex-direction: column;
         gap: 2rem;
         text-align: center;
         padding: 2rem;
-
         border-radius: 10px;
         background: #1c191d;
     }
@@ -38,4 +37,50 @@ import TitleSection from "../TitleSection.astro";
         font-size: 1.5rem;
         color: #B44CE4;
     }
+
+@media (max-width: 1366px) {
+    section {
+        gap: 4rem;
+    }
+    .contact-container {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 900px) {
+    section {
+        gap: 3rem;
+    }
+    .contact-container {
+        gap: 1rem;
+        padding: 1rem;
+
+        width: 90%;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        gap: 2rem;
+    }
+    .contact-container {
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
 </style>

@@ -37,12 +37,17 @@ const { title, description, image, href } = Astro.props;
         height: auto;
         display: flex;
         max-height: 220px;
-
         gap: 1rem;
         background: #1C191D;
         border-radius: 10px;
         text-decoration: none;
         color: white;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .project-card:hover {
+        background-color: #1e1b1f;
+        transform: scale(1.03);
     }
 
     .image-container {
@@ -51,7 +56,6 @@ const { title, description, image, href } = Astro.props;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     .image-container > img {
@@ -67,6 +71,7 @@ const { title, description, image, href } = Astro.props;
         gap: 1rem;
         padding: 1rem;
     }
+
     .information-container > p {
         font-size: 1.2rem;
     }
@@ -82,11 +87,84 @@ const { title, description, image, href } = Astro.props;
         align-items: center;
         text-decoration: none;
     }
+
     .title-zone > h2 {
         font-size: 2rem;
         color: #B44CE4;
     }
 
+    @media (max-width: 1200px) {
 
 
+        .image-container {
+            height: auto;
+        }
+
+        .information-container {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem;
+
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .project-card {
+            flex-direction: column;
+            max-height: none;
+            padding: 1rem;
+        }
+
+        .image-container {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container > img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .information-container {
+            width: 100%;
+            padding: 1rem 0;
+        }
+
+        .information-container > p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .title-zone > h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .project-card {
+            flex-direction: column;
+            max-height: none;
+        }
+
+        .image-container {
+            width: 100%;
+            height: auto;
+        }
+
+        .information-container {
+            width: 100%;
+        }
+
+        .information-container > p {
+            font-size: 0.9rem;
+        }
+
+        .title-zone > h2 {
+            font-size: 1.2rem;
+        }
+    }
 </style>
