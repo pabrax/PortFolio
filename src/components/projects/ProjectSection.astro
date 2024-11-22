@@ -3,7 +3,6 @@ import TitleSection from "../TitleSection.astro";
 import ProjectCard from "./ProjectCard.astro";
 import IconBox from "./IconBox.astro";
 
-
 // icons
 import AstroIcon from "../icons/tech/astro-icon.astro";
 import CssIcon from "../icons/tech/css-icon.astro";
@@ -18,131 +17,136 @@ import PowershellIcon from "../icons/tech/powershell-icon.astro";
 import PythonIcon from "../icons/tech/python-icon.astro";
 import BashIcon from "../icons/tech/bash-icon.astro";
 import ReactIcon from "../icons/tech/react-icon.astro";
-
 ---
 
-
 <section id="proyectos">
+  <TitleSection title="Proyectos" />
 
-    <TitleSection title="Proyectos"/>
+  <div class="projects">
+    <ProjectCard
+      title="Gestion Profesoral"
+      description="Plataforma académica para gestión profesoral con backend en C#, base de datos SQL Server y cliente en Angular."
+      image="../../../public/gestion_profesoral.png"
+      href="https://github.com/pabrax/Proyecto_ASW"
+    >
+      <!-- Tecnologias empleadas -->
 
-    <div class="projects">
+      <IconBox>
+        <HtmlIcon width="35px" height="35px" />
+      </IconBox>
 
-        <ProjectCard
-            title="Gestion Profesoral"
-            description="Plataforma académica para gestión profesoral con backend en C#, base de datos SQL Server y cliente en Angular."
-            image="https://avatars.githubusercontent.com/u/77436608?v=4"
-            href="https://github.com/pabrax/Proyecto_ASW">
+      <IconBox>
+        <CssIcon width="35px" height="35px" />
+      </IconBox>
 
-            <!-- Tecnologias empleadas -->
+      <IconBox>
+        <AngularIcon width="35px" height="35px" />
+      </IconBox>
 
-            <IconBox>
-                <HtmlIcon width="35px" height="35px"/>
-            </IconBox>
+      <IconBox>
+        <DotnetIcon width="35px" height="35px" />
+      </IconBox>
+    </ProjectCard>
 
-            <IconBox>
-                <CssIcon width="35px" height="35px"/>
-            </IconBox>
+    <ProjectCard
+      title="Moebiuz"
+      description="Moebiuz es un proyecto academico para la gestion del tiempo y administracion de tareas, esta creado en NodeJs, MongoDB y javascript vanilla."
+      image="../../../public/moebiuz_landing.png"
+      href="https://github.com/pabrax/proyectoPHP"
+    >
+      <!-- Tecnologias empleadas -->
 
-            <IconBox>
-                <AngularIcon width="35px" height="35px"/>
-            </IconBox>
-            
-            <IconBox>
-                <DotnetIcon width="35px" height="35px"/>
-            </IconBox>
+      <IconBox>
+        <HtmlIcon width="35px" height="35px" />
+      </IconBox>
 
+      <IconBox>
+        <CssIcon width="35px" height="35px" />
+      </IconBox>
 
+      <IconBox>
+        <NodejsIcon width="35px" height="35px" />
+      </IconBox>
+    </ProjectCard>
 
-        </ProjectCard>
+    <ProjectCard
+      title="Win-ToolBox"
+      description="Coleccion de scripts en PowerShell para la automatizacion y configuracion de tareas basicas y avanzadas en Windows."
+      image="../../../public/powershell_scripts.png"
+      href="https://github.com/pabrax/Win-Toolbox"
+    >
+      <!-- Tecnologias empleadas -->
 
+      <IconBox>
+        <PowershellIcon width="35px" height="35px" />
+      </IconBox>
 
-        <ProjectCard
-            title="Gestion De Empleados"
-            description="Proyecto Academico de gestion de empleados, roles y tareas creado en Laravel."
-            image="https://avatars.githubusercontent.com/u/77436608?v=4"
-            href="https://github.com/pabrax/proyectoPHP">
+      <IconBox>
+        <BashIcon width="35px" height="35px" />
+      </IconBox>
+    </ProjectCard>
 
-            <!-- Tecnologias empleadas -->
-            
-            <IconBox>
-                <PhpIcon width="35px" height="35px"/>
-            </IconBox>
+    <ProjectCard
+      title="Wiky Morty"
+      description="Proyecto Creado en React, Consumiendo la API de Rick and Morty para mostrar informacion de los personajes."
+      image="../../../public/wikimorty_mockup.png"
+      href="https://github.com/pabrax/WikiYMorty"
+    >
+      <!-- Tecnologias empleadas -->
 
-            <IconBox>
-                <CssIcon width="35px" height="35px"/>
-            </IconBox>
+      <IconBox>
+        <HtmlIcon width="35px" height="35px" />
+      </IconBox>
 
-            <IconBox>
-                <LaravelIcon width="35px" height="35px"/>
-            </IconBox>
+      <IconBox>
+        <CssIcon width="35px" height="35px" />
+      </IconBox>
 
-        </ProjectCard>
+      <IconBox>
+        <ReactIcon width="35px" height="35px" />
+      </IconBox>
+    </ProjectCard>
 
-        <ProjectCard
-            title="Win-ToolBox"
-            description="Coleccion de scripts en PowerShell para la automatizacion y configuracion de tareas basicas y avanzadas en Windows."
-            image="https://avatars.githubusercontent.com/u/77436608?v=4"
-            href="https://github.com/pabrax/Win-Toolbox"
-        >
-                
-                <!-- Tecnologias empleadas -->
-    
-                <IconBox>
-                    <PowershellIcon width="35px" height="35px"/>
-                </IconBox>
-    
-                <IconBox>
-                    <BashIcon width="35px" height="35px"/>
-                </IconBox>
-        </ProjectCard>
+    <ProjectCard
+      title="Gestion De Empleados"
+      description="Proyecto Academico de gestion de empleados, roles y tareas creado en Laravel."
+      image="../../../public/proyecto_php.png"
+      href="https://github.com/pabrax/proyectoPHP"
+    >
+      <!-- Tecnologias empleadas -->
 
-        <ProjectCard
-            title="Wiky Morty"
-            description="Proyecto Creado en React, Consumiendo la API de Rick and Morty para mostrar informacion de los personajes."
-            image="../../../public/wiky_morty.png"
-            href="https://github.com/pabrax/WikiYMorty"
-        >
-            <!-- Tecnologias empleadas -->
+      <IconBox>
+        <PhpIcon width="35px" height="35px" />
+      </IconBox>
 
-            <IconBox>
-                <HtmlIcon width="35px" height="35px"/>
-            </IconBox>
-        
-            <IconBox>
-                <CssIcon width="35px" height="35px"/>
-            </IconBox>
+      <IconBox>
+        <CssIcon width="35px" height="35px" />
+      </IconBox>
 
-            <IconBox>
-                <ReactIcon width="35px" height="35px"/>
-            </IconBox>
-
-        </ProjectCard>
-    </div>
-
-
+      <IconBox>
+        <LaravelIcon width="35px" height="35px" />
+      </IconBox>
+    </ProjectCard>
+  </div>
 </section>
 
-
 <style>
-    
-    section {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4rem;
-        
-    }
+  section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
 
-    .projects {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4rem;
-        flex-wrap: wrap;
-        width: 80%;
-    }
+  .projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    width: 80%;
+  }
 </style>
