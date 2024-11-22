@@ -3,5 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site:'https://pabrax.github.io',
+    site: 'https://pabrax.github.io',
+    base: '/Portfolio/',
 });
